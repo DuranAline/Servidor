@@ -16,10 +16,8 @@ let posicao = {lat: null, lng: null}
 const senha = 'mcs2023'
 
 app.post('/posicao', (req, res) => {
-    if(req.body.senha === senha) {
         posicao = req.body.posicao;
         res.send(posicao)
-    }
 })
 
 app.get('/posicao', (req, res) => {
