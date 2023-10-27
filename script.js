@@ -13,9 +13,13 @@ app.use((req, res, next) => {
 // coordenadas do caminhão
 let posicao = {lat: null, lng: null}
 
+const senha = 'mcs2023'
+
 app.post('/posicao', (req, res) => {
-    posicao = req.body.posicao;
-    res.send(posicao)
+    if(req.body.senha === senha) {
+        posicao = req.body.posicao;
+        res.send(posicao)
+    }
 })
 
 app.get('/posicao', (req, res) => {
