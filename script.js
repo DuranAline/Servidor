@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json())
 
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*'); 
+    res.header('Access-Control-Allow-Origin', 'https://gps-p6yrmby6l-mariabernardes23s-projects.vercel.app/ https://monitoramento-coleta-seletiva-2vqpp6ddk.vercel.app/mapa.html'); 
     res.header('Access-Control-Allow-Methods', 'GET, POST');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
