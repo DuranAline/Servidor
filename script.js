@@ -18,7 +18,7 @@ app.post('/posicao', (req, res) => {
 
     if ( posicaoSenha.senha == 'mcs2023' ) {
         posicao = req.body.posicao;
-        res.send(posicao)
+        res.send(posicao.lat, posicao.lng)
     }
 })
 
