@@ -15,10 +15,10 @@ let posicao = {lat: null, lng: null, senha: ''}
 
 app.post('/posicao', (req, res) => {
     let posicaoSenha = req.body.posicao;
-
-    if ( posicaoSenha.senha == 'mcs2023' ) {
+    
+    if ( posicaoSenha.senha == 'mcs2023') {
         posicao = req.body.posicao;
-        res.send(posicao.lat, posicao.lng)
+        res.send(posicao)
     }
 })
 
