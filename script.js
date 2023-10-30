@@ -14,8 +14,12 @@ app.use((req, res, next) => {
 let posicao = {lat: null, lng: null, senha: ''}
 
 app.post('/posicao', (req, res) => {
-    posicao = req.body.posicao;
-    res.send(posicao)
+    let posicaoSenha = req.body.posicao;
+
+    if ( posicaoSenha.senha == 'mcs2023' ) {
+        posicao = req.body.posicao;
+        res.send(posicao)
+    }
 })
 
 app.get('/posicao', (req, res) => {
